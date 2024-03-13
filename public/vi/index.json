@@ -1,0 +1,85 @@
+[
+{
+	"uri": "//localhost:1313/vi/",
+	"title": "CDK cơ bản",
+	"tags": [],
+	"description": "",
+	"content": "CDK cơ bản Tổng quan CloudFormation là một dịch vụ cho phép người dùng có khả năng triển khai kiến trúc ứng dụng bằng code (Infrastructure as code). Người dùng có thể viết file JSON hoặc YAML để triển khai tất cả dịch vụ của AWS (VPC, EC2, Lambda,…). Một tập hợp tài nguyên AWS sẽ được triển khai qua một CloudFormation Stack, và bạn có thể dễ dàng quản lý phiên bản, tạo phiên bản mới hoặc xoá toàn bộ tài nguyên liên quan. Toàn bộ quá trình có thể được tạo tự động và hoàn toàn miễn phí (bạn chỉ cần trả phí cho những tài nguyên được tạo bên dưới).\nAWS Cloud Development Kit (CDK) là một dịch vụ của AWS hoạt động dựa trên CloudFormation. Tuy nhiên, với CDK, người dùng có thể định nghĩa kiến trúc các tài nguyên của AWS bằng các ngôn ngữ lập trình phổ biến như TypeScript, JavaScript, Python, Java, C#\nAWS Cloud Development Kit (AWS CDK) Trong bài lab này, chúng ta sẽ thực hành sử dụng CDK. Sau khi hoàn thành bài lab, người đọc sẽ có thể\nHiểu các khái niệm cơ bản của CDK Triển khai một kiến trúc cơ bản lên AWS sử dụng CDK Cấu hình EC2 thông qua user data Trước khi làm workshop này về CDK, bạn nên làm workshop về CloudFormation để hiểu một vài khái niệm cơ bản, do CDK thực chất hoạt động dựa trên CloudFormation\nNội dung Giới thiệu Chuẩn bị CDK cơ bản Tạo CDK Template Cập nhật CDK Template Dọn dẹp tài nguyên "
+},
+{
+	"uri": "//localhost:1313/vi/1-introduce/",
+	"title": "Giới thiệu",
+	"tags": [],
+	"description": "",
+	"content": "Tổng quan CloudFormation là một dịch vụ cho phép người dùng có khả năng triển khai kiến trúc ứng dụng bằng code (Infrastructure as code). Người dùng có thể viết file JSON hoặc YAML để triển khai tất cả dịch vụ của AWS (VPC, EC2, Lambda,…). Một tập hợp tài nguyên AWS sẽ được triển khai qua một CloudFormation Stack, và bạn có thể dễ dàng quản lý phiên bản, tạo phiên bản mới hoặc xoá toàn bộ tài nguyên liên quan. Toàn bộ quá trình có thể được tạo tự động và hoàn toàn miễn phí (bạn chỉ cần trả phí cho những tài nguyên được tạo bên dưới).\nAWS Cloud Development Kit (CDK) là một dịch vụ của AWS hoạt động dựa trên CloudFormation. Tuy nhiên, với CDK, người dùng có thể định nghĩa kiến trúc các tài nguyên của AWS bằng các ngôn ngữ lập trình phổ biến như TypeScript, JavaScript, Python, Java, C#\nAWS Cloud Development Kit (AWS CDK) Trong bài lab này, chúng ta sẽ thực hành sử dụng CDK. Sau khi hoàn thành bài lab, người đọc sẽ có thể\nHiểu các khái niệm cơ bản của CDK Triển khai một kiến trúc cơ bản lên AWS sử dụng CDK Cấu hình EC2 thông qua user data Trước khi làm workshop này về CDK, bạn nên làm workshop về CloudFormation để hiểu một vài khái niệm cơ bản, do CDK thực chất hoạt động dựa trên CloudFormation\n"
+},
+{
+	"uri": "//localhost:1313/vi/2-prerequiste/2.1-createiamrole/",
+	"title": "Tạo IAM Role",
+	"tags": [],
+	"description": "",
+	"content": "Tạo IAM Role Truy cập giao diện AWS Management Console\nTìm IAM Chọn IAM Trong giao diện IAM\nChọn Roles Chọn Create role Trong giao diện Select trusted entity\nChọn AWS service Use case, chọn EC2 Chọn Next Trong giao diện Create role\nTìm policy AdministratorAccess Chọn policy AdministratorAccess Chọn Next Trong giao diện Role details\nRole name, nhập CDK-Role Chọn Create role Hoàn thành tạo role "
+},
+{
+	"uri": "//localhost:1313/vi/3-cdkbasic/3.1-createworkspace/",
+	"title": "Tạo workspace",
+	"tags": [],
+	"description": "",
+	"content": "Tạo workspace Nếu bạn đã làm workshop về CloudFormation, bạn có thể sử dụng Cloud9 workspace đã tạo trong bài lab đó và bỏ qua 6 bước đầu của phần này.\nNếu không, bạn có thể tiếp tục với các bước sau đây.\nTruy cập vào giao diện AWS Management Console\nTìm Cloud9 Chọn Cloud9 Trong giao diện AWS Cloud9\nChọn Create environment Trong giao diện Create environment\nName, nhập ASG-Cloud9-Workshop Environment type, chọn New EC2 instance: EC2 Instance được khởi tạo cùng với Cloud9 environment. Instance được truy cập qua Cloud9 IDE sử dụng phương thức SSH. Instance type, chọn t3.small(2GiB RAM + 2vCPU) Platform, chọn Amazon Linux 2023 (Recommended) Timeout: sau 30’ nếu EC2 Instance không có tiến trình nào được chạy, Cloud9 sẽ stop Instance. Để tuỳ chọn Network theo như mặc định (default VPC) Chọn Create Giao diện môi trường vừa khởi tạo "
+},
+{
+	"uri": "//localhost:1313/vi/2-prerequiste/",
+	"title": "Các bước chuẩn bị",
+	"tags": [],
+	"description": "",
+	"content": "Các bước chuẩn bị Tạo IAM Role "
+},
+{
+	"uri": "//localhost:1313/vi/3-cdkbasic/3.2-setupcloud9/",
+	"title": "Cấu hình Cloud9",
+	"tags": [],
+	"description": "",
+	"content": "Cấu hình môi trường Cloud9 Trong giao diện môi trường vừa khởi tạo\nChọn biểu tượng user hình tròn ở góc phải màn hình, bên cạnh Share Chọn Manage EC2 Instance Trong giao diện EC2\nChọn Action Chọn Security Chọn Modify IAM role Trong giao diện Modify IAM role\nChọn role đã tạo, bài lab này chọn CDK-Role Chọn Update IAM role Hoàn thành gán role thành công. Trong giao diện của môi trường AWS Cloud9\nChọn Icon của Cloud9 Chọn Preferences Cloud9 sẽ quản lý thông tin chứng thực IAM một cách tự động. Chúng ta sẽ cần phải vô hiệu hóa tính năng này và sử dụng IAM Role.\nChọn AWS SETTINGS Bỏ chọn AWS managed temporary credentials Copy và Paste đoạn lệnh dưới đây vào Terminal của Cloud9 Workspace để cài đặt các công cụ hỗ trợ xử lý text trên dòng lệnh. sudo yum -y install jq gettext bash-completion Tương tự như CloudFormation, bạn có thể thực hiện cài đặt tool cfn-lint để giúp bạn kiểm tra CDK templates và các thông tin khác, bao gồm kiểm tra các thuộc tính của tài nguyên đã chính xác hay chưa hoặc thông tin cấu hình đã theo best practices hay chưa. pip install cfn-lint Kiểm tra cài đặt cfn-lint thành công bằng cách dùng lệnh sau: cfn-lint --version Chúng ta sẽ cấu hình aws cli sử dụng Region hiện tại. export ACCOUNT_ID=$(aws sts get-caller-identity --output text --query Account)\rexport AWS_REGION=ap-southeast-1\rexport AZS=($(aws ec2 describe-availability-zones --query \u0026#39;AvailabilityZones[].ZoneName\u0026#39; --output text --region $AWS_REGION)) Chúng ta sẽ lưu các thông tin cấu hình vào bash_profile echo \u0026#34;export ACCOUNT_ID=${ACCOUNT_ID}\u0026#34; | tee -a ~/.bash_profile echo \u0026#34;export AWS_REGION=${AWS_REGION}\u0026#34; | tee -a ~/.bash_profile echo \u0026#34;export AZS=(${AZS[@]})\u0026#34; | tee -a ~/.bash_profile aws configure set default.region ${AWS_REGION} Kiểm tra xem CLI CDK đã được cài đặt chưa bằng cách chạy lệnh. cdk --version Chúng ta sẽ sử dụng câu lệnh để kiểm tra Cloud9 IDE đang sử dụng IAM Role có chính xác không. aws sts get-caller-identity --query Arn | grep CDK-Role -q \u0026amp;\u0026amp; echo \u0026#34;IAM role valid\u0026#34; || echo \u0026#34;IAM role NOT valid\u0026#34; "
+},
+{
+	"uri": "//localhost:1313/vi/3-cdkbasic/",
+	"title": "CDK cơ bản",
+	"tags": [],
+	"description": "",
+	"content": "CDK cơ bản Hãy đảm bảo bạn tạo và sử dụng các tài nguyên tại region này để tránh gặp lỗi trong quá trình thực hành. Sau khi hoàn thành bài lab này, bạn sẽ biết cách\nTạo VPC, subnet bằng CDK Tạo và cấu hình 1 máy chủ EC2 bằng CDK CDK 2.27.0 sẽ được sử dụng\n"
+},
+{
+	"uri": "//localhost:1313/vi/4-createcdktemplate/",
+	"title": "Tạo CDK Template",
+	"tags": [],
+	"description": "",
+	"content": "Tạo CDK Template Chúng ta sẽ thao tác với CDK chủ yếu qua AWS CDK Toolkit (công cụ đã được cài đặt ở phần trước). AWS CDK Toolkit sẽ chạy code của bạn, sinh ra 1 template CloudFormation và triển khai template đó. CDK Toolkit cung cấp cho người dùng khả năng có thể triển khai, so sánh, xoá và tìm lỗi trong một đoạn mã CDK. Tham khảo tài liệu chính thức của AWS về CDK\nTrong phần này, chúng ta sẽ thử triển khai một VPC và public subnet tương ứng, sử dụng Python trong CDK\nTruy cập vào workspace Cloud9 đã tạo. Tạo thư mục mới cho bài lab mkdir cdk-workshop\rcd cdk-workshop Khởi tạo cdk workspace. Ở bài lab này, chúng ta sẽ sử dụng ngôn ngữ python, tuy nhiên bạn hoàn toàn có thể chỉnh sửa thành Typescript, Javascript, Java hoặc C# cdk init app --language python Sau khi chạy xong, bạn có thể xem qua kiến trúc thư mục vừa được khởi tạo. Chú ý đến 2 file chính là app.py và cdk_workshop/cdk_workshop_stack.py\nImport các thư viện cần thiết trong file cdk_workshop/cdk_workshop_stack.py from aws_cdk import (\rStack,\raws_ec2 as ec2,\raws_iam as iam\r)\rfrom aws_cdk.aws_s3_assets import Asset\rimport os\rfrom constructs import Construct Trong file cdk_workshop/cdk_workshop_stack.py, khai báo 1 VPC và 2 public subnet nằm trong VPC bằng việc thêm đoạn mã sau vào hàm __init__\n# VPC\rvpc = ec2.Vpc(self, \u0026#34;CDK-Workshop-App-VPC\u0026#34;,\rnat_gateways=0,\rsubnet_configuration=[ec2.SubnetConfiguration(name=\u0026#34;public\u0026#34;,subnet_type=ec2.SubnetType.PUBLIC)]\r) Bạn có thể sử dụng lệnh sau để khởi tạo project và kết hợp kích hoạt môi trường cho project. cdk init Để kích hoạt môi trường để tránh trường hợp chạy lỗi project. source .venv/bin/activate Sau khi đã kích hoạt môi trường, chúng ta cần cài đặt các dependency cơ bản ( trong lab này, chúng ta cài đặt các dependency của Python) python -m pip install -r requirements.txt Kiểm tra CloudFormation Kiểm tra S3 bucket Nếu đây là lần đầu tiên bạn triển khai CDK, hãy bootstrap app bằng cách chạy lệnh sau cdk bootstrap Trong lần chạy đầu tiên, chúng ta sẽ cần phải bootstrap ứng dụng CDK. Việc bootstrap này sẽ\nTạo một CloudFormation stack mới và một S3 bucket tương ứng để chứa các asset cho stack này (như code của Lambda function, CloudFormation template) Tạo các IAM role cần thiết để CDK CLI có thể triển khai các tài nguyên Triển khai tài nguyên cdk deploy Lệnh trên tương đương với việc chạy cdk deploy \u0026ndash;app ./app.py. Khi chạy, code trong file app.py sẽ được gọi. Đoạn code này sẽ import tài nguyên từ cdk_workshop/cdk_workshop_stack.py, và sinh ra CloudFormation template tương ứng trong thư mục cdk.out. Sau đó, CloudFormation template này sẽ được triển khai trên AWS.\nSau khi triển khai xong, bạn sẽ thấy CloudFormation stack mới được tạo ở trong CloudFormation dashboard Bạn cũng có thể thấy VPC và 2 public subnet mới đã được tạo trong dashboard VPC Nếu bạn đã làm đến bước này, chúc mừng bạn đã triển khai thành công resource của AWS thông qua CDK!\nỞ phần tiếp theo, chúng ta sẽ sử dụng VPC và subnet đã tạo để triển khai một máy chủ EC2 và cài đặt Apache server trên máy chủ đó. Chúng ta cũng sẽ làm quen với một vài tính năng khác của CDK như sinh cấu hình CloudFormation từ CDK sử dụng cdk synch hoặc kiểm tra ChangeSet sử dụng cdk diff\n"
+},
+{
+	"uri": "//localhost:1313/vi/5-updatecdktemplate/",
+	"title": "Cập nhật CDK Template",
+	"tags": [],
+	"description": "",
+	"content": "Cập nhật CDK Template Trong phần này, chúng ta sẽ sử dụng VPC và subnet đã tạo để triển khai một máy chủ EC2 và cài đặt Apache server trên máy chủ đó.\nTrước khi cập nhật code CDK, chúng ta sẽ thử kiểm tra các tài nguyên đã thay đổi (ChangeSet) bằng cách chạy lệnh cdk diff Ở đằng sau, lệnh này sẽ thực hiện 2 thứ\nChạy cdk synth để sinh ra một template CloudFormation hợp lệ vào thư mục cdk.out So sánh các tài nguyên trong template này với các tài nguyên hiện có trên CloudFormation Stack đã được triển khai Kết quả sẽ là ChangeSet giữa phiên bản CDK đang có và phiên bản CDK được triển khai trên AWS. Ở đây, chúng ta chưa thay đổi gì, nên kết quả sẽ được như sau\nThêm role mới vào stack bằng việc thêm đoạn code sau vào hàm init() của file cdk_workshop/cdk_workshop_stack.py # Instance Role and SSM Managed Policy\rrole = iam.Role(self, \u0026#34;InstanceRole\u0026#34;, assumed_by=iam.ServicePrincipal(\u0026#34;ec2.amazonaws.com\u0026#34;)) Thêm security group web server để cho phép access từ port 80 # Create a security group for the EC2 instance\rwebserverSG = ec2.SecurityGroup(self, \u0026#39;webserver-sg\u0026#39;, vpc=vpc)\rwebserverSG.addIngressRule(\rec2.Peer.anyIpv4(),\rec2.Port.tcp(80),\r\u0026#39;allow HTTP traffic from anywhere\u0026#39;,\r) Khởi tạo máy chủ EC2 và gán role đã tạo làm service role # AMI\ramzn_linux = ec2.MachineImage.latest_amazon_linux(\rgeneration=ec2.AmazonLinuxGeneration.AMAZON_LINUX_2,\redition=ec2.AmazonLinuxEdition.STANDARD,\rvirtualization=ec2.AmazonLinuxVirt.HVM,\rstorage=ec2.AmazonLinuxStorage.GENERAL_PURPOSE\r)\r# Instance\rinstance = ec2.Instance(self, \u0026#34;Instance\u0026#34;,\rinstance_type=ec2.InstanceType(\u0026#34;t3.nano\u0026#34;),\rmachine_image=amzn_linux,\rvpc = vpc,\rrole = role,\rsecurity_group = webserverSG\r) Thêm user data cho máy chủ EC2 ...\rdirname = os.path.dirname(__file__)\r...\rclass CdkWorkshopStack(Stack):\rdef __init__(self, scope: Construct, construct_id: str, **kwargs) -\u0026gt; None:\r...\r# Script in S3 as Asset\rasset = Asset(self, \u0026#34;Asset\u0026#34;, path=os.path.join(dirname, \u0026#34;configure.sh\u0026#34;))\rlocal_path = instance.user_data.add_s3_download_command(\rbucket=asset.bucket,\rbucket_key=asset.s3_object_key\r)\r# Userdata executes script from instance.user_data.add_execute_file_command(\rfile_path=local_path\r)\rasset.grant_read(instance.role)\rKiểm tra nội dung file from aws_cdk import (\rStack,\raws_ec2 as ec2,\raws_iam as iam\r)\rfrom aws_cdk.aws_s3_assets import Asset\rimport os\rfrom constructs import Construct\rdirname = os.path.dirname(__file__)\rclass CdkWorkshopStack(Stack):\rdef __init__(self, scope: Construct, construct_id: str, **kwargs) -\u0026gt; None:\rsuper().__init__(scope, construct_id, **kwargs)\r# VPC\rvpc = ec2.Vpc(self, \u0026#34;CDK-Workshop-App-VPC\u0026#34;,\rnat_gateways=0,\rsubnet_configuration=[ec2.SubnetConfiguration(name=\u0026#34;public\u0026#34;,subnet_type=ec2.SubnetType.PUBLIC)]\r)\r# Instance Role and SSM Managed Policy\rrole = iam.Role(self, \u0026#34;InstanceRole\u0026#34;, assumed_by=iam.ServicePrincipal(\u0026#34;ec2.amazonaws.com\u0026#34;))\r# Create a security group for the EC2 instance\rwebserverSG = ec2.SecurityGroup(self, \u0026#39;webserver-sg\u0026#39;, vpc=vpc)\rwebserverSG.add_ingress_rule(\rec2.Peer.any_ipv4(),\rec2.Port.tcp(80),\r\u0026#39;allow HTTP traffic from anywhere\u0026#39;,\r);\rwebserverSG.add_ingress_rule(\rec2.Peer.any_ipv4(),\rec2.Port.tcp(22),\r\u0026#39;allow SSH traffic from anywhere\u0026#39;,\r);\r# AMI\ramzn_linux = ec2.MachineImage.latest_amazon_linux(\rgeneration=ec2.AmazonLinuxGeneration.AMAZON_LINUX_2,\redition=ec2.AmazonLinuxEdition.STANDARD,\rvirtualization=ec2.AmazonLinuxVirt.HVM,\rstorage=ec2.AmazonLinuxStorage.GENERAL_PURPOSE\r)\r# Instance\rinstance = ec2.Instance(self, \u0026#34;Instance\u0026#34;,\rinstance_type=ec2.InstanceType(\u0026#34;t3.nano\u0026#34;),\rmachine_image=amzn_linux,\rvpc = vpc,\rrole = role,\rsecurity_group = webserverSG\r)\r# Script in S3 as Asset\rasset = Asset(self, \u0026#34;Asset\u0026#34;, path=os.path.join(dirname, \u0026#34;configure.sh\u0026#34;))\rlocal_path = instance.user_data.add_s3_download_command(\rbucket=asset.bucket,\rbucket_key=asset.s3_object_key\r)\r# Userdata executes script from S3\rinstance.user_data.add_execute_file_command(\rfile_path=local_path\r)\rasset.grant_read(instance.role) Tạo file configure.sh để lưu mã khởi tạo cho instance EC2. Mã khởi tạo này sẽ cập nhật phần mềm và cài đặt apache server lên instance của chúng ta Thêm đoạn mã sau: #!/bin/bash\ryum update -y\ryum install -y httpd.x86_64\rsystemctl start httpd.service\rsystemctl enable httpd.service\recho “Hello World from $(hostname -f)” \u0026gt; /var/www/html/index.html Chạy lệnh cdk diff để xem sự thay đổi của stack chúng ta mới định nghĩa cdk diff Ôi không, đã có lỗi xảy ra. Nhìn vào log, bạn có thể thấy rằng đường link của file asset đã bị sai. Chúng ta có thể thấy cdk cung cấp cho ta khả năng kiểm soát lỗi, cũng giống như taskcat với CloudFormation.\nĐể sửa lại, chúng ta chỉ cần đưa file [configure.sh](http://configure.sh) về đúng vị trí. Từ đường dẫn ~/environment/cdk-workshop, chạy lệnh sau mv configure.sh cdk_workshop/ Chạy lại lệnh cdk diff cdk diff Các thay đổi của template đã được hiển thị\nTriển khai lên AWS cdk deploy Chọn y để tiếp tục Hoàn thành triển khai Truy cập vào cửa sổ EC2 dashboard, lấy thông tin Public IP của EC2 instance Nếu bạn thấy màn hình hiển thị văn bản từ apache thì setup đã thành công "
+},
+{
+	"uri": "//localhost:1313/vi/6-cleanup/",
+	"title": "Dọn dẹp tài nguyên",
+	"tags": [],
+	"description": "",
+	"content": "Dọn dẹp tài nguyên Chúc mừng bạn đã hoàn thành workshop cơ bản về CDK. Để tổng kết, bạn đã\nCài đặt và làm quen với CDK CLI Sử dụng CDK để triển khai một infrastructure đơn giản, bao gồm VPC Public subnet EC2 instance Role và Security group Cài đặt apache trên EC2 instance thông qua user data Đừng quên xoá các tài nguyên đã tạo. Có hai cách bạn có thể thực hiện để dọn dẹp các tài nguyên:\nXoá CloudFormation stack trên AWS console Sử dụng CDK CLI để xoá stack cdk destroy Sau đó nhớ xoá Cloud9 Instance sau khi xoá CDK stack bạn nhé. "
+},
+{
+	"uri": "//localhost:1313/vi/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "//localhost:1313/vi/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]
