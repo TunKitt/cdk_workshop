@@ -5,7 +5,7 @@ weight : 2
 chapter : false
 pre : " <b> 3.2 </b> "
 ---
-
+ 
 #### Cấu hình môi trường Cloud9
 
 1. Trong giao diện môi trường vừa khởi tạo

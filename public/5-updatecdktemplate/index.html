@@ -12,21 +12,21 @@
     <title>Update CDK Template :: USING FILE STORAGE GATEWAY</title>
 
     
-    <link href="/css/nucleus.css?1710329983" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1710329983" rel="stylesheet">
-    <link href="/css/hybrid.css?1710329983" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1710329983" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1710329983" rel="stylesheet">
-    <link href="/css/auto-complete.css?1710329983" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1710329983" rel="stylesheet">
-    <link href="/css/theme.css?1710329983" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1710329983" rel="stylesheet">
+    <link href="/css/nucleus.css?1710387519" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1710387519" rel="stylesheet">
+    <link href="/css/hybrid.css?1710387519" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1710387519" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1710387519" rel="stylesheet">
+    <link href="/css/auto-complete.css?1710387519" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1710387519" rel="stylesheet">
+    <link href="/css/theme.css?1710387519" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1710387519" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1710329983" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1710387519" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1710329983"></script>
+    <script src="/js/jquery-3.3.1.min.js?1710387519"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1710329983"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1710329983"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1710387519"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1710387519"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1710329983"></script>
+<script type="text/javascript" src="/js/search.js?1710387519"></script>
 
     
   </div>
@@ -531,7 +531,7 @@
 <li>Compare the resources in this template with the existing resources on the deployed CloudFormation Stack</li>
 </ul>
 <p>The result will be a ChangeSet between the existing CDK instance and the CDK instance deployed on AWS. Here, we haven&rsquo;t changed anything, so the result will be as follows</p>
-<p><img alt="Amazon CDk" src="/images/4/0001.png?featherlight=false&width=90pc"></p>
+<p><img alt="alt text" src="/5-updatecdktemplate/image.png"></p>
 <ol start="2">
 <li>Add the new role to the stack by adding the following code to the <strong>init</strong>() function of the file cdk_workshop/cdk_workshop_stack.py</li>
 </ol>
@@ -662,11 +662,11 @@ class CdkWorkshopStack(Stack):
             file_path=local_path
             )
         asset.grant_read(instance.role)
-</code></pre><p><img alt="Amazon CDk" src="/images/4/0002.png?featherlight=false&width=90pc"></p>
+</code></pre><p><img alt="alt text" src="/5-updatecdktemplate/image-1.png"></p>
 <ol start="7">
 <li>Create the configure.sh file to store the initialization code for the EC2 instance. This initialization code will update the software and install the apache server on our instance</li>
 </ol>
-<p><img alt="Amazon CDk" src="/images/4/0003.png?featherlight=false&width=90pc"></p>
+<p><img alt="alt text" src="/5-updatecdktemplate/image-3.png"></p>
 <ol start="8">
 <li>Add the following code:</li>
 </ol>
@@ -676,23 +676,23 @@ yum install -y httpd.x86_64
 systemctl start httpd.service
 systemctl enable httpd.service
 echo “Hello World from $(hostname -f)” &gt; /var/www/html/index.html
-</code></pre><p><img alt="Amazon CDk" src="/images/4/0004.png?featherlight=false&width=90pc"></p>
+</code></pre><p><img alt="alt text" src="/5-updatecdktemplate/image-2.png"></p>
 <ol start="9">
 <li>Run the command cdk diff to see the change of the stack we just defined</li>
 </ol>
 <pre tabindex="0"><code>cdk diff
 </code></pre><p>Oh no, something went wrong. Looking at the log, you can see that the link of the asset file is wrong. We can see that <code>cdk</code> provides us with error handling, just like <code>taskcat</code> with CloudFormation.</p>
-<p><img alt="Amazon CDk" src="/images/4/0005.png?featherlight=false&width=90pc"></p>
+<p><img alt="alt text" src="/5-updatecdktemplate/image-4.png"></p>
 <ol start="10">
 <li>To fix it, we just need to put the file <code>[configure.sh](http://configure.sh)</code> in the right place. From the path <code>~/environment/cdk-workshop</code>, run the following command</li>
 </ol>
 <pre tabindex="0"><code>mv configure.sh cdk_workshop/
-</code></pre><p><img alt="Amazon CDk" src="/images/4/0006.png?featherlight=false&width=90pc"></p>
+</code></pre><p><img alt="alt text" src="/5-updatecdktemplate/image-5.png"></p>
 <ol start="11">
 <li>Rerun cdk diff . command</li>
 </ol>
 <pre tabindex="0"><code>cdk diff
-</code></pre><p><img alt="Amazon CDk" src="/images/4/0007.png?featherlight=false&width=90pc"></p>
+</code></pre><p><img alt="alt text" src="/5-updatecdktemplate/image-6.png"></p>
 <p>Template changes have been displayed</p>
 <ol start="12">
 <li>Deploy to AWS</li>
@@ -701,11 +701,11 @@ echo “Hello World from $(hostname -f)” &gt; /var/www/html/index.html
 </code></pre><ul>
 <li>Select y to continue</li>
 </ul>
-<p><img alt="Amazon CDk" src="/images/4/0008.png?featherlight=false&width=90pc"></p>
+<p><img alt="alt text" src="/5-updatecdktemplate/image-7.png"></p>
 <ol start="13">
 <li>Complete Deployment</li>
 </ol>
-<p><img alt="Amazon CDk" src="/images/4/0009.png?featherlight=false&width=90pc"></p>
+<p><img alt="alt text" src="/5-updatecdktemplate/image-8.png"></p>
 <ol start="14">
 <li>Access EC2 dashboard window, get Public IP information of EC2 instance</li>
 </ol>
@@ -926,19 +926,19 @@ echo “Hello World from $(hostname -f)” &gt; /var/www/html/index.html
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1710329983"></script>
-    <script src="/js/perfect-scrollbar.min.js?1710329983"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1710329983"></script>
-    <script src="/js/jquery.sticky.js?1710329983"></script>
-    <script src="/js/featherlight.min.js?1710329983"></script>
-    <script src="/js/highlight.pack.js?1710329983"></script>
+    <script src="/js/clipboard.min.js?1710387519"></script>
+    <script src="/js/perfect-scrollbar.min.js?1710387519"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1710387519"></script>
+    <script src="/js/jquery.sticky.js?1710387519"></script>
+    <script src="/js/featherlight.min.js?1710387519"></script>
+    <script src="/js/highlight.pack.js?1710387519"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1710329983"></script>
-    <script src="/js/learn.js?1710329983"></script>
-    <script src="/js/hugo-learn.js?1710329983"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1710387519"></script>
+    <script src="/js/learn.js?1710387519"></script>
+    <script src="/js/hugo-learn.js?1710387519"></script>
 
-    <link href="/mermaid/mermaid.css?1710329983" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1710329983"></script>
+    <link href="/mermaid/mermaid.css?1710387519" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1710387519"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

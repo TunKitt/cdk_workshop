@@ -12,21 +12,21 @@
     <title>Create workspace :: USING FILE STORAGE GATEWAY</title>
 
     
-    <link href="/css/nucleus.css?1710329983" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1710329983" rel="stylesheet">
-    <link href="/css/hybrid.css?1710329983" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1710329983" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1710329983" rel="stylesheet">
-    <link href="/css/auto-complete.css?1710329983" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1710329983" rel="stylesheet">
-    <link href="/css/theme.css?1710329983" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1710329983" rel="stylesheet">
+    <link href="/css/nucleus.css?1710387519" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1710387519" rel="stylesheet">
+    <link href="/css/hybrid.css?1710387519" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1710387519" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1710387519" rel="stylesheet">
+    <link href="/css/auto-complete.css?1710387519" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1710387519" rel="stylesheet">
+    <link href="/css/theme.css?1710387519" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1710387519" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1710329983" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1710387519" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1710329983"></script>
+    <script src="/js/jquery-3.3.1.min.js?1710387519"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1710329983"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1710329983"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1710387519"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1710387519"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1710329983"></script>
+<script type="text/javascript" src="/js/search.js?1710387519"></script>
 
     
   </div>
@@ -546,51 +546,29 @@
 </ul>
 </li>
 </ol>
-<p><img alt="Amazon CDk" src="/images/2/0002.png?featherlight=false&width=90pc"></p>
+<p><img alt="alt text" src="/3-cdkbasic/3.1-createworkspace/image.png"></p>
 <ol start="3">
 <li>
 <p>In the <strong>Create environment</strong> interface</p>
 <ul>
 <li><strong>Name</strong>, enter <code>ASG-Cloud9-Workshop</code></li>
-<li>Select <strong>Next step</strong></li>
-</ul>
-</li>
-</ol>
-<p><img alt="Amazon CDk" src="/images/2/0003.png?featherlight=false&width=90pc"></p>
-<ol start="4">
-<li>
-<p>In the <strong>Configure settings</strong> section</p>
-<ul>
-<li><strong>Create a new EC2 instance for the environment (direct access)</strong>: EC2 Instance is initialized with the Cloud9 environment. The instance is accessed via Cloud9 IDE using the SSH method.</li>
-<li><strong>Create a new no-ingress EC2 instance for the environment (access via Systems Manager)</strong>: EC2 Instance is also initialized with Cloud9 environment and Instance can be accessed via System Manager.</li>
-<li><strong>Create and run in a remote server (SSH connection)</strong>: EC2 Instance already available, Cloud9 environment setup environment to be eligible to access EC2 Instance.</li>
-<li>Within the scope of today&rsquo;s CDK service introduction, to
-keep it simple and focus on the main content we will choose the second option
-best - EC2 and Cloud9 are initialized at the same time and can access Instance
-over SSH.</li>
-<li>The remaining configuration content we leave as default with:</li>
-<li><strong>Cost-saving setting</strong>: after 30 minutes if EC2 Instance has no processes running, Cloud9 will stop Instance.</li>
-<li><strong>IAM Role</strong>: AWSServiceRoleForAWSCloud9 - is a service-linked role made available by AwS and tied to the Cloud9 service</li>
-<li><strong>Environment type</strong>, select <strong>Create a new EC2 instance for the environment (direct access)</strong></li>
+<li><strong>Environment type</strong>, select <strong>New EC2 instance</strong>: EC2 Instance is initialized with the Cloud9 environment. The instance is accessed via Cloud9 IDE using the SSH method.</li>
 <li><strong>Instance type</strong>, select <strong>t3.small(2GiB RAM + 2vCPU)</strong></li>
 <li><strong>Platform</strong>, select <strong>Amazon Linux 2 (recommended)</strong></li>
+<li><strong>Timeout</strong>: after 30 minutes if EC2 Instance has no processes running, Cloud9 will stop Instance.</li>
 <li>Leave the <strong>Network</strong> option as default (default VPC)</li>
 </ul>
 </li>
 </ol>
-<p><img alt="Amazon CDk" src="/images/2/0004.png?featherlight=false&width=90pc"></p>
+<p><img alt="alt text" src="/3-cdkbasic/3.1-createworkspace/image-1.png"></p>
+<ol start="4">
+<li>Select <strong>Create</strong></li>
+</ol>
+<p><img alt="alt text" src="/3-cdkbasic/3.1-createworkspace/image-2.png"></p>
 <ol start="5">
-<li>Select <strong>Next step</strong></li>
-</ol>
-<p><img alt="Amazon CDk" src="/images/2/0005.png?featherlight=false&width=90pc"></p>
-<ol start="6">
-<li>Select <strong>Create environment</strong></li>
-</ol>
-<p><img alt="Amazon CDk" src="/images/2/0006.png?featherlight=false&width=90pc"></p>
-<ol start="7">
 <li>Environment interface just initialized</li>
 </ol>
-<p><img alt="Amazon CDk" src="/images/2/0007.png?featherlight=false&width=90pc"></p>
+<p><img alt="alt text" src="/3-cdkbasic/3.1-createworkspace/image-3.png"></p>
 
 
 
@@ -804,19 +782,19 @@ over SSH.</li>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1710329983"></script>
-    <script src="/js/perfect-scrollbar.min.js?1710329983"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1710329983"></script>
-    <script src="/js/jquery.sticky.js?1710329983"></script>
-    <script src="/js/featherlight.min.js?1710329983"></script>
-    <script src="/js/highlight.pack.js?1710329983"></script>
+    <script src="/js/clipboard.min.js?1710387519"></script>
+    <script src="/js/perfect-scrollbar.min.js?1710387519"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1710387519"></script>
+    <script src="/js/jquery.sticky.js?1710387519"></script>
+    <script src="/js/featherlight.min.js?1710387519"></script>
+    <script src="/js/highlight.pack.js?1710387519"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1710329983"></script>
-    <script src="/js/learn.js?1710329983"></script>
-    <script src="/js/hugo-learn.js?1710329983"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1710387519"></script>
+    <script src="/js/learn.js?1710387519"></script>
+    <script src="/js/hugo-learn.js?1710387519"></script>
 
-    <link href="/mermaid/mermaid.css?1710329983" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1710329983"></script>
+    <link href="/mermaid/mermaid.css?1710387519" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1710387519"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

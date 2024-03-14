@@ -12,21 +12,21 @@
     <title>Configure Cloud9 environment :: USING FILE STORAGE GATEWAY</title>
 
     
-    <link href="/css/nucleus.css?1710329983" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1710329983" rel="stylesheet">
-    <link href="/css/hybrid.css?1710329983" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1710329983" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1710329983" rel="stylesheet">
-    <link href="/css/auto-complete.css?1710329983" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1710329983" rel="stylesheet">
-    <link href="/css/theme.css?1710329983" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1710329983" rel="stylesheet">
+    <link href="/css/nucleus.css?1710387519" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1710387519" rel="stylesheet">
+    <link href="/css/hybrid.css?1710387519" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1710387519" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1710387519" rel="stylesheet">
+    <link href="/css/auto-complete.css?1710387519" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1710387519" rel="stylesheet">
+    <link href="/css/theme.css?1710387519" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1710387519" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1710329983" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1710387519" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1710329983"></script>
+    <script src="/js/jquery-3.3.1.min.js?1710387519"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1710329983"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1710329983"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1710387519"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1710387519"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1710329983"></script>
+<script type="text/javascript" src="/js/search.js?1710387519"></script>
 
     
   </div>
@@ -535,7 +535,7 @@
 </ul>
 </li>
 </ol>
-<p><img alt="Amazon CDk" src="/images/2/0007.png?featherlight=false&width=90pc"></p>
+<p><img alt="alt text" src="/3-cdkbasic/3.2-setupcloud9/image.png"></p>
 <ol start="2">
 <li>
 <p>In the <strong>EC2</strong> interface</p>
@@ -546,7 +546,7 @@
 </ul>
 </li>
 </ol>
-<p><img alt="Amazon CDk" src="/images/2/0008.png?featherlight=false&width=90pc"></p>
+<p><img alt="alt text" src="/3-cdkbasic/3.2-setupcloud9/Blank%20diagram%20-%20Page%203%20%281%29.png"></p>
 <ol start="3">
 <li>
 <p>In the <strong>Modify IAM role</strong> interface</p>
@@ -556,56 +556,54 @@
 </ul>
 </li>
 </ol>
-<p><img alt="Amazon CDk" src="/images/2/0009.png?featherlight=false&width=90pc"></p>
+<p><img alt="alt text" src="/3-cdkbasic/3.2-setupcloud9/Blank%20diagram%20-%20Page%203%20%283%29.png"></p>
 <ol start="4">
 <li>Completed the role assignment successfully.</li>
 </ol>
-<p><img alt="Amazon CDk" src="/images/2/00010.png?featherlight=false&width=90pc"></p>
+<p><img alt="alt text" src="/3-cdkbasic/3.2-setupcloud9/image-3.png"></p>
 <ol start="5">
 <li>
 <p>In the view of the <strong>AWS Cloud9</strong> environment</p>
 <ul>
-<li>Select <strong>AWS Cloud9</strong></li>
+<li>Select <strong>Icon Cloud9</strong></li>
 <li>Select <strong>Preferences</strong></li>
 </ul>
 </li>
 </ol>
-<p><img alt="Amazon CDk" src="/images/2/00011.png?featherlight=false&width=90pc"></p>
+<p><img alt="alt text" src="/3-cdkbasic/3.2-setupcloud9/image-4.png"></p>
 <ol start="6">
 <li>
 <p>Cloud9 will manage IAM credentials automatically. We will need to disable this feature and use the IAM Role.</p>
 <ul>
 <li>Select <strong>AWS SETTINGS</strong></li>
-<li>Select <strong>Credentials</strong></li>
 <li>Uncheck <strong>AWS managed temporary credentials</strong></li>
 </ul>
 </li>
 </ol>
-<p><img alt="Amazon CDk" src="/images/2/00012.png?featherlight=false&width=90pc"></p>
+<p><img alt="alt text" src="/3-cdkbasic/3.2-setupcloud9/image-5.png"></p>
 <ol start="7">
 <li>Copy and Paste the command below into the Terminal of Cloud9 Workspace to install tools to support text processing on the command line.</li>
 </ol>
-<pre tabindex="0"><code>sudo yum -y install jq gettext bash-completion moreutils
-</code></pre><p><img alt="Amazon CDk" src="/images/2/00013.png?featherlight=false&width=90pc"></p>
-<ol start="8">
+<pre tabindex="0"><code>sudo yum -y install jq gettext bash-completion
+</code></pre><ol start="8">
 <li>Similar to CloudFormation, you can install the cfn-lint tool to help you check CDK templates and other information, including auditing.
 Check if the resource properties are correct or not
 configured according to best practices or not.</li>
 </ol>
 <pre tabindex="0"><code>pip install cfn-lint
-</code></pre><p><img alt="Amazon CDk" src="/images/2/00014.png?featherlight=false&width=90pc"></p>
+</code></pre><p><img alt="alt text" src="/3-cdkbasic/3.2-setupcloud9/image-6.png"></p>
 <ol start="9">
 <li>Check the successful installation of cfn-lint using the following command:</li>
 </ol>
 <pre tabindex="0"><code>cfn-lint --version
-</code></pre><p><img alt="Amazon CDk" src="/images/2/00015.png?featherlight=false&width=90pc"></p>
+</code></pre><p><img alt="alt text" src="/3-cdkbasic/3.2-setupcloud9/image-7.png"></p>
 <ol start="10">
 <li>We will configure the aws cli to use the current Region.</li>
 </ol>
 <pre tabindex="0"><code>export ACCOUNT_ID=$(aws sts get-caller-identity --output text --query Account)
-export AWS_REGION=$(curl -s 169.254.169.254/latest/dynamic/instance-identity/document | jq -r &#39;.region&#39;)
+export AWS_REGION=ap-southeast-1
 export AZS=($(aws ec2 describe-availability-zones --query &#39;AvailabilityZones[].ZoneName&#39; --output text --region $AWS_REGION))
-</code></pre><p><img alt="Amazon CDk" src="/images/2/00016.png?featherlight=false&width=90pc"></p>
+</code></pre><p><img alt="alt text" src="/3-cdkbasic/3.2-setupcloud9/image-8.png"></p>
 <ol start="11">
 <li>We will save the configuration information to bash_profile</li>
 </ol>
@@ -616,12 +614,12 @@ echo &#34;export AWS_REGION=${AWS_REGION}&#34; | tee -a ~/.bash_profile
 echo &#34;export AZS=(${AZS[@]})&#34; | tee -a ~/.bash_profile
 
 aws configure set default.region ${AWS_REGION}
-</code></pre><p><img alt="Amazon CDk" src="/images/2/00017.png?featherlight=false&width=90pc"></p>
+</code></pre><p><img alt="alt text" src="/3-cdkbasic/3.2-setupcloud9/image-12.png"></p>
 <ol start="12">
 <li>Check if CLI CDK is installed by running the command.</li>
 </ol>
 <pre tabindex="0"><code>cdk --version
-</code></pre><p><img alt="Amazon CDk" src="/images/2/00018.png?featherlight=false&width=90pc"></p>
+</code></pre><p><img alt="alt text" src="/3-cdkbasic/3.2-setupcloud9/image-13.png"></p>
 <ol start="13">
 <li>We will use the command to check if the Cloud9 IDE is using the IAM Role correctly.</li>
 </ol>
@@ -842,19 +840,19 @@ aws configure set default.region ${AWS_REGION}
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1710329983"></script>
-    <script src="/js/perfect-scrollbar.min.js?1710329983"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1710329983"></script>
-    <script src="/js/jquery.sticky.js?1710329983"></script>
-    <script src="/js/featherlight.min.js?1710329983"></script>
-    <script src="/js/highlight.pack.js?1710329983"></script>
+    <script src="/js/clipboard.min.js?1710387519"></script>
+    <script src="/js/perfect-scrollbar.min.js?1710387519"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1710387519"></script>
+    <script src="/js/jquery.sticky.js?1710387519"></script>
+    <script src="/js/featherlight.min.js?1710387519"></script>
+    <script src="/js/highlight.pack.js?1710387519"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1710329983"></script>
-    <script src="/js/learn.js?1710329983"></script>
-    <script src="/js/hugo-learn.js?1710329983"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1710387519"></script>
+    <script src="/js/learn.js?1710387519"></script>
+    <script src="/js/hugo-learn.js?1710387519"></script>
 
-    <link href="/mermaid/mermaid.css?1710329983" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1710329983"></script>
+    <link href="/mermaid/mermaid.css?1710387519" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1710387519"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -5,7 +5,7 @@ weight : 4
 chapter : false
 pre : " <b> 4. </b> "
 ---
-
+ 
 #### Tạo CDK Template
 
 Chúng ta sẽ thao tác với CDK chủ yếu qua AWS CDK Toolkit (công cụ đã được cài đặt ở phần trước). AWS CDK Toolkit sẽ chạy code của bạn, sinh ra 1 template CloudFormation và triển khai template đó. CDK Toolkit cung cấp cho người dùng khả năng có thể triển khai, so sánh, xoá và tìm lỗi trong một đoạn mã CDK. Tham khảo [tài liệu chính thức của AWS về CDK](https://docs.aws.amazon.com/cdk/v2/guide/cli.html)

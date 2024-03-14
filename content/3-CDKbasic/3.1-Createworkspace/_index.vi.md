@@ -11,7 +11,7 @@ Nếu bạn đã làm [workshop về CloudFormation](https://000037.awsstudygrou
 
 Nếu không, bạn có thể tiếp tục với các bước sau đây.
 
-
+ 
 1. Truy cập vào giao diện [AWS Management Console](https://aws.amazon.com/console/)
 
    - Tìm **Cloud9**

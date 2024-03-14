@@ -9,7 +9,7 @@ pre : " <b> 2.1 </b> "
 #### Create IAM Role
 
 1. Access the [AWS Management Console] interface(https://aws.amazon.com/console/)
-
+ 
    - Find **IAM**
    - Select **IAM**
 
@@ -21,7 +21,7 @@ pre : " <b> 2.1 </b> "
    - Select **Roles**
    - Select **Create role**
 
-![Amazon CDk](/images/1/0002.png?featherlight=false&width=90pc)
+![alt text](<Blank diagram - Page 3 (2).png>)
 
 3. In the **Select trusted entity** interface
 
@@ -29,7 +29,7 @@ pre : " <b> 2.1 </b> "
    - **Use case**, select **EC2**
    - Select **Next**
 
-![Amazon CDk](/images/1/0003.png?featherlight=false&width=90pc)
+![alt text](image-1.png)
 
 4. In the **Create role** interface
 
@@ -37,18 +37,18 @@ pre : " <b> 2.1 </b> "
    - Select the policy **AdministratorAccess**
    - Select **Next**
 
-![Amazon CDk](/images/1/0004.png?featherlight=false&width=90pc)
+![alt text](image-2.png)
 
 5. In the **Role details** interface
 
    - **Role name**, enter `CDK-Role`
 
-![Amazon CDk](/images/1/0005.png?featherlight=false&width=90pc)
+![alt text](image-3.png)
 
 6. Select **Create role**
 
-![Amazon CDk](/images/1/0006.png?featherlight=false&width=90pc)
+![alt text](image-4.png)
 
 7. Complete role creation
 
-![Amazon CDk](/images/1/0007.png?featherlight=false&width=90pc)
+![alt text](image-5.png)

@@ -5,7 +5,7 @@ weight : 5
 chapter : false
 pre : " <b> 5. </b> "
 ---
-
+ 
 #### Update CDK Template
 
 In this section, we will use the created VPC and subnet to deploy an EC2 server and install the Apache server on it.
@@ -23,7 +23,7 @@ In the background, this command will do 2 things
 
 The result will be a ChangeSet between the existing CDK instance and the CDK instance deployed on AWS. Here, we haven't changed anything, so the result will be as follows
 
-![Amazon CDk](/images/4/0001.png?featherlight=false&width=90pc)
+![alt text](image.png)
 
 2. Add the new role to the stack by adding the following code to the __init__() function of the file cdk_workshop/cdk_workshop_stack.py
 
@@ -166,11 +166,11 @@ class CdkWorkshopStack(Stack):
         asset.grant_read(instance.role)
 ```
 
-![Amazon CDk](/images/4/0002.png?featherlight=false&width=90pc)
+![alt text](image-1.png)
 
 7. Create the configure.sh file to store the initialization code for the EC2 instance. This initialization code will update the software and install the apache server on our instance
 
-![Amazon CDk](/images/4/0003.png?featherlight=false&width=90pc)
+![alt text](image-3.png)
 
 
 8. Add the following code:
@@ -186,7 +186,7 @@ systemctl enable httpd.service
 echo “Hello World from $(hostname -f)” > /var/www/html/index.html
 ```
 
-![Amazon CDk](/images/4/0004.png?featherlight=false&width=90pc)
+![alt text](image-2.png)
 
 9. Run the command cdk diff to see the change of the stack we just defined
 
@@ -196,7 +196,7 @@ cdk diff
 
 Oh no, something went wrong. Looking at the log, you can see that the link of the asset file is wrong. We can see that `cdk` provides us with error handling, just like `taskcat` with CloudFormation.
 
-![Amazon CDk](/images/4/0005.png?featherlight=false&width=90pc)
+![alt text](image-4.png)
 
 
 10. To fix it, we just need to put the file `[configure.sh](http://configure.sh)` in the right place. From the path `~/environment/cdk-workshop`, run the following command
@@ -205,7 +205,7 @@ Oh no, something went wrong. Looking at the log, you can see that the link of th
 mv configure.sh cdk_workshop/
 ```
 
-![Amazon CDk](/images/4/0006.png?featherlight=false&width=90pc)
+![alt text](image-5.png)
 
 11. Rerun cdk diff . command
 
@@ -213,7 +213,7 @@ mv configure.sh cdk_workshop/
 cdk diff
 ```
 
-![Amazon CDk](/images/4/0007.png?featherlight=false&width=90pc)
+![alt text](image-6.png)
 
 Template changes have been displayed
 
@@ -225,11 +225,11 @@ cdk deploy
 
 - Select y to continue
 
-![Amazon CDk](/images/4/0008.png?featherlight=false&width=90pc)
+![alt text](image-7.png)
 
 13. Complete Deployment
 
-![Amazon CDk](/images/4/0009.png?featherlight=false&width=90pc)
+![alt text](image-8.png)
 
 14. Access EC2 dashboard window, get Public IP information of EC2 instance
 

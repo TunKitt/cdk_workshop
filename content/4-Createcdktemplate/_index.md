@@ -5,7 +5,7 @@ weight : 4
 chapter : false
 pre : " <b> 4. </b> "
 ---
-
+ 
 #### Create CDK Template
 
 We will work with the CDK mainly through the AWS CDK Toolkit (the tool was installed in the previous section). The AWS CDK Toolkit will run your code, generate a CloudFormation template, and deploy that template. The CDK Toolkit provides users with the ability to deploy, compare, remove, and debug a piece of CDK code. Refer to [official AWS documentation on CDK](https://docs.aws.amazon.com/cdk/v2/guide/cli.html)
@@ -21,7 +21,7 @@ mkdir cdk-workshop
 cd cdk-workshop
 ```
 
-![Amazon CDk](/images/3/0001.png?featherlight=false&width=90pc)
+![alt text](image.png)
 
 2. Initialize the workspace cdk. In this lab, we will use `python` language, but you can completely edit it into Typescript, Javascript, Java or C#
 
@@ -30,7 +30,7 @@ cdk init app --language python
 ```
 Once it's run, you can take a look at the directory architecture that has just been initialized. Pay attention to the two main files [app.py]() and `cdk_workshop/cdk_workshop_stack.py`
 
-![Amazon CDk](/images/3/0002.png?featherlight=false&width=90pc)
+![alt text](image-1.png)
 
 3. Import the required libraries in the file `cdk_workshop/cdk_workshop_stack.py`
 
@@ -56,7 +56,7 @@ vpc = ec2.Vpc(self, "CDK-Workshop-App-VPC",
     )
 ```
 
-![Amazon CDk](/images/3/0003.png?featherlight=false&width=90pc)
+![alt text](image-2.png)
 
 4. You can use the following command to initialize the project and combine the activation of the environment for the project.
 
@@ -70,7 +70,7 @@ cdk init
 source .venv/bin/activate
 ```
 
-![Amazon CDk](/images/3/0004.png?featherlight=false&width=90pc)
+![alt text](image-3.png)
 
 5. After activating the environment, we need to install the basic dependencies (in this lab, we install the Python dependencies)
 
@@ -78,7 +78,7 @@ source .venv/bin/activate
 python -m pip install -r requirements.txt
 ```
 
-![Amazon CDk](/images/3/0005.png?featherlight=false&width=90pc)
+![alt text](image-4.png)
 
 6. Check **CloudFormation**
 
@@ -94,7 +94,7 @@ python -m pip install -r requirements.txt
 cdk bootstrap
 ```
 
-![Amazon CDk](/images/3/0008.png?featherlight=false&width=90pc)
+![alt text](image-5.png)
 
 On the first run, we will need to **bootstrap** the CDK application. This bootstrap will
 
@@ -109,7 +109,7 @@ cdk deploy
 
 The above command is equivalent to running cdk deploy --app ./app.py. When run, the code in the app.py file will be called. This code will import resources from cdk_workshop/cdk_workshop_stack.py, and generate the corresponding CloudFormation template in the cdk.out folder. This CloudFormation template will then be deployed on AWS.
 
-![Amazon CDk](/images/3/0009.png?featherlight=false&width=90pc)
+![alt text](image-6.png)
 
 10. Once deployed, you will see the newly created CloudFormation stack in the CloudFormation dashboard
 

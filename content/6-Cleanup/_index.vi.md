@@ -5,7 +5,7 @@ weight : 6
 chapter : false
 pre : " <b> 6. </b> "
 ---
-
+ 
 #### Dọn dẹp tài nguyên
 
 Chúc mừng bạn đã hoàn thành workshop cơ bản về CDK. Để tổng kết, bạn đã

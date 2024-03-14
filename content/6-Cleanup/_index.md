@@ -5,7 +5,7 @@ weight : 6
 chapter : false
 pre : " <b> 6. </b> "
 ---
-
+ 
 #### Clean up resources
 
 Congratulations on completing the basic CDK workshop. To summarize, you have
@@ -27,6 +27,6 @@ Don't forget to delete the created resources. There are two ways you can clean u
 cdk destroy
 ```
 
-![Amazon CDk](/images/4/00012.png?featherlight=false&width=90pc)
+![alt text](image.png)
 
 - Remember to delete Cloud9 Instance after you delete the CDK stack.

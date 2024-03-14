@@ -12,21 +12,21 @@
     <title>Create CDK Template :: USING FILE STORAGE GATEWAY</title>
 
     
-    <link href="/css/nucleus.css?1710329983" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1710329983" rel="stylesheet">
-    <link href="/css/hybrid.css?1710329983" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1710329983" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1710329983" rel="stylesheet">
-    <link href="/css/auto-complete.css?1710329983" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1710329983" rel="stylesheet">
-    <link href="/css/theme.css?1710329983" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1710329983" rel="stylesheet">
+    <link href="/css/nucleus.css?1710387519" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1710387519" rel="stylesheet">
+    <link href="/css/hybrid.css?1710387519" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1710387519" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1710387519" rel="stylesheet">
+    <link href="/css/auto-complete.css?1710387519" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1710387519" rel="stylesheet">
+    <link href="/css/theme.css?1710387519" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1710387519" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1710329983" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1710387519" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1710329983"></script>
+    <script src="/js/jquery-3.3.1.min.js?1710387519"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1710329983"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1710329983"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1710387519"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1710387519"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1710329983"></script>
+<script type="text/javascript" src="/js/search.js?1710387519"></script>
 
     
   </div>
@@ -530,13 +530,13 @@
 </ul>
 <pre tabindex="0"><code>mkdir cdk-workshop
 cd cdk-workshop
-</code></pre><p><img alt="Amazon CDk" src="/images/3/0001.png?featherlight=false&width=90pc"></p>
+</code></pre><p><img alt="alt text" src="/4-createcdktemplate/image.png"></p>
 <ol start="2">
 <li>Initialize the workspace cdk. In this lab, we will use <code>python</code> language, but you can completely edit it into Typescript, Javascript, Java or C#</li>
 </ol>
 <pre tabindex="0"><code>cdk init app --language python
 </code></pre><p>Once it&rsquo;s run, you can take a look at the directory architecture that has just been initialized. Pay attention to the two main files <a href="/">app.py</a> and <code>cdk_workshop/cdk_workshop_stack.py</code></p>
-<p><img alt="Amazon CDk" src="/images/3/0002.png?featherlight=false&width=90pc"></p>
+<p><img alt="alt text" src="/4-createcdktemplate/image-1.png"></p>
 <ol start="3">
 <li>Import the required libraries in the file <code>cdk_workshop/cdk_workshop_stack.py</code></li>
 </ol>
@@ -555,7 +555,7 @@ vpc = ec2.Vpc(self, &#34;CDK-Workshop-App-VPC&#34;,
     nat_gateways=0,
     subnet_configuration=[ec2.SubnetConfiguration(name=&#34;public&#34;,subnet_type=ec2.SubnetType.PUBLIC)]
     )
-</code></pre><p><img alt="Amazon CDk" src="/images/3/0003.png?featherlight=false&width=90pc"></p>
+</code></pre><p><img alt="alt text" src="/4-createcdktemplate/image-2.png"></p>
 <ol start="4">
 <li>You can use the following command to initialize the project and combine the activation of the environment for the project.</li>
 </ol>
@@ -564,12 +564,12 @@ vpc = ec2.Vpc(self, &#34;CDK-Workshop-App-VPC&#34;,
 <li>To activate the environment to avoid the error of running project.</li>
 </ul>
 <pre tabindex="0"><code>source .venv/bin/activate
-</code></pre><p><img alt="Amazon CDk" src="/images/3/0004.png?featherlight=false&width=90pc"></p>
+</code></pre><p><img alt="alt text" src="/4-createcdktemplate/image-3.png"></p>
 <ol start="5">
 <li>After activating the environment, we need to install the basic dependencies (in this lab, we install the Python dependencies)</li>
 </ol>
 <pre tabindex="0"><code>python -m pip install -r requirements.txt
-</code></pre><p><img alt="Amazon CDk" src="/images/3/0005.png?featherlight=false&width=90pc"></p>
+</code></pre><p><img alt="alt text" src="/4-createcdktemplate/image-4.png"></p>
 <ol start="6">
 <li>Check <strong>CloudFormation</strong></li>
 </ol>
@@ -582,7 +582,7 @@ vpc = ec2.Vpc(self, &#34;CDK-Workshop-App-VPC&#34;,
 <li>If this is your first time deploying the CDK, bootstrap the app by running the following command</li>
 </ol>
 <pre tabindex="0"><code>cdk bootstrap
-</code></pre><p><img alt="Amazon CDk" src="/images/3/0008.png?featherlight=false&width=90pc"></p>
+</code></pre><p><img alt="alt text" src="/4-createcdktemplate/image-5.png"></p>
 <p>On the first run, we will need to <strong>bootstrap</strong> the CDK application. This bootstrap will</p>
 <ul>
 <li>Create a new CloudFormation stack and a corresponding S3 bucket to hold assets for this stack (like Lambda function code, CloudFormation template)</li>
@@ -593,7 +593,7 @@ vpc = ec2.Vpc(self, &#34;CDK-Workshop-App-VPC&#34;,
 </ol>
 <pre tabindex="0"><code>cdk deploy
 </code></pre><p>The above command is equivalent to running cdk deploy &ndash;app ./app.py. When run, the code in the app.py file will be called. This code will import resources from cdk_workshop/cdk_workshop_stack.py, and generate the corresponding CloudFormation template in the cdk.out folder. This CloudFormation template will then be deployed on AWS.</p>
-<p><img alt="Amazon CDk" src="/images/3/0009.png?featherlight=false&width=90pc"></p>
+<p><img alt="alt text" src="/4-createcdktemplate/image-6.png"></p>
 <ol start="10">
 <li>Once deployed, you will see the newly created CloudFormation stack in the CloudFormation dashboard</li>
 </ol>
@@ -816,19 +816,19 @@ vpc = ec2.Vpc(self, &#34;CDK-Workshop-App-VPC&#34;,
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1710329983"></script>
-    <script src="/js/perfect-scrollbar.min.js?1710329983"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1710329983"></script>
-    <script src="/js/jquery.sticky.js?1710329983"></script>
-    <script src="/js/featherlight.min.js?1710329983"></script>
-    <script src="/js/highlight.pack.js?1710329983"></script>
+    <script src="/js/clipboard.min.js?1710387519"></script>
+    <script src="/js/perfect-scrollbar.min.js?1710387519"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1710387519"></script>
+    <script src="/js/jquery.sticky.js?1710387519"></script>
+    <script src="/js/featherlight.min.js?1710387519"></script>
+    <script src="/js/highlight.pack.js?1710387519"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1710329983"></script>
-    <script src="/js/learn.js?1710329983"></script>
-    <script src="/js/hugo-learn.js?1710329983"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1710387519"></script>
+    <script src="/js/learn.js?1710387519"></script>
+    <script src="/js/hugo-learn.js?1710387519"></script>
 
-    <link href="/mermaid/mermaid.css?1710329983" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1710329983"></script>
+    <link href="/mermaid/mermaid.css?1710387519" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1710387519"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
