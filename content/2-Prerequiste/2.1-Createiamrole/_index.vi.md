@@ -5,7 +5,7 @@ weight : 1
 chapter : false
 pre : " <b> 2.1 </b> "
 ---
-
+ 
 #### Tạo IAM Role
 
 1. Truy cập giao diện [AWS Management Console](https://aws.amazon.com/console/)

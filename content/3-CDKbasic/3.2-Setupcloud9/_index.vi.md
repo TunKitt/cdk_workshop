@@ -13,7 +13,7 @@ pre : " <b> 3.2 </b> "
    - Chọn biểu tượng user hình tròn ở góc phải màn hình, bên cạnh **Share**
    - Chọn **Manage EC2 Instance**
 
-![alt text](image.png)
+![alt text](<Blank diagram - Page 2.png>)
 
 2. Trong giao diện **EC2**
 
@@ -39,7 +39,7 @@ pre : " <b> 3.2 </b> "
    - Chọn **Icon của Cloud9**
    - Chọn **Preferences**
 
-![alt text](image-4.png)
+![alt text](<Blank diagram - Page 2 (1).png>)
 
 6. Cloud9 sẽ quản lý thông tin chứng thực IAM một cách tự động. Chúng ta sẽ cần phải vô hiệu hóa tính năng này và sử dụng IAM Role.
 
@@ -75,8 +75,8 @@ cfn-lint --version
 10. Chúng ta sẽ cấu hình aws cli sử dụng Region hiện tại.
 
 ```
-export ACCOUNT_ID=$(aws sts get-caller-identity --output text --query Account)
-export AWS_REGION=ap-southeast-1
+export ACCOUNT_ID=<Your Account ID>
+export AWS_REGION=<Your AWS Region>
 export AZS=($(aws ec2 describe-availability-zones --query 'AvailabilityZones[].ZoneName' --output text --region $AWS_REGION))
 ```
 
@@ -92,7 +92,7 @@ echo "export AWS_REGION=${AWS_REGION}" | tee -a ~/.bash_profile
 echo "export AZS=(${AZS[@]})" | tee -a ~/.bash_profile                                                                                                                                    
 
 aws configure set default.region ${AWS_REGION}
-```
+``` 
 
 ![alt text](image-12.png)
 

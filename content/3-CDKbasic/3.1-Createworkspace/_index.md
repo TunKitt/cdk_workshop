@@ -4,7 +4,7 @@ date : "`r Sys.Date()`"
 weight : 1
 chapter : false
 pre : " <b> 3.1 </b> "
----
+--- 
  
 #### Create workspace
 If you did the CloudFormation workshop, you can use the Cloud9 workspace created in that lab and skip the **first 6 steps* * of this section.

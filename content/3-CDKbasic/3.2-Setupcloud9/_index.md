@@ -13,7 +13,7 @@ pre : " <b> 3.2 </b> "
    - Select the circular user icon in the right corner of the screen, next to **Share**
    - Select **Manage EC2 Instance**
 
-![alt text](image.png)
+![alt text](<Blank diagram - Page 2.png>)
 
 2. In the **EC2** interface
 
@@ -39,7 +39,7 @@ pre : " <b> 3.2 </b> "
    - Select **Icon Cloud9**
    - Select **Preferences**
 
-![alt text](image-4.png)
+![alt text](<Blank diagram - Page 2 (1).png>)
 
 6. Cloud9 will manage IAM credentials automatically. We will need to disable this feature and use the IAM Role.
 
@@ -49,7 +49,7 @@ pre : " <b> 3.2 </b> "
 ![alt text](image-5.png)
 
 7. Copy and Paste the command below into the Terminal of Cloud9 Workspace to install tools to support text processing on the command line.
-
+ 
 ```
 sudo yum -y install jq gettext bash-completion
 ```
@@ -75,8 +75,8 @@ cfn-lint --version
 10. We will configure the aws cli to use the current Region.
 
 ```
-export ACCOUNT_ID=$(aws sts get-caller-identity --output text --query Account)
-export AWS_REGION=ap-southeast-1
+export ACCOUNT_ID=<Your Account ID>
+export AWS_REGION=<Your AWS Region>
 export AZS=($(aws ec2 describe-availability-zones --query 'AvailabilityZones[].ZoneName' --output text --region $AWS_REGION))
 ```
 
