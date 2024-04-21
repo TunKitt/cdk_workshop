@@ -12,21 +12,21 @@
     <title>Cấu hình Cloud9 :: TRIỂN KHAI FILE STORAGE GATEWAY</title>
 
     
-    <link href="/css/nucleus.css?1710387519" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1710387519" rel="stylesheet">
-    <link href="/css/hybrid.css?1710387519" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1710387519" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1710387519" rel="stylesheet">
-    <link href="/css/auto-complete.css?1710387519" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1710387519" rel="stylesheet">
-    <link href="/css/theme.css?1710387519" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1710387519" rel="stylesheet">
+    <link href="/css/nucleus.css?1713665487" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1713665487" rel="stylesheet">
+    <link href="/css/hybrid.css?1713665487" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1713665487" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1713665487" rel="stylesheet">
+    <link href="/css/auto-complete.css?1713665487" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1713665487" rel="stylesheet">
+    <link href="/css/theme.css?1713665487" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1713665487" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1710387519" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1713665487" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1710387519"></script>
+    <script src="/js/jquery-3.3.1.min.js?1713665487"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1710387519"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1710387519"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1713665487"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1713665487"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1710387519"></script>
+<script type="text/javascript" src="/js/search.js?1713665487"></script>
 
     
   </div>
@@ -535,7 +535,7 @@
 </ul>
 </li>
 </ol>
-<p><img alt="alt text" src="/3-cdkbasic/3.2-setupcloud9/image.png"></p>
+<p><img alt="alt text" src="/3-cdkbasic/3.2-setupcloud9/Blank%20diagram%20-%20Page%202.png"></p>
 <ol start="2">
 <li>
 <p>Trong giao diện <strong>EC2</strong></p>
@@ -570,7 +570,7 @@
 </ul>
 </li>
 </ol>
-<p><img alt="alt text" src="/3-cdkbasic/3.2-setupcloud9/image-4.png"></p>
+<p><img alt="alt text" src="/3-cdkbasic/3.2-setupcloud9/Blank%20diagram%20-%20Page%202%20%281%29.png"></p>
 <ol start="6">
 <li>
 <p>Cloud9 sẽ quản lý thông tin chứng thực IAM một cách tự động. Chúng ta sẽ cần phải vô hiệu hóa tính năng này và sử dụng IAM Role.</p>
@@ -600,8 +600,8 @@ cấu hình đã theo best practices hay chưa.</li>
 <ol start="10">
 <li>Chúng ta sẽ cấu hình aws cli sử dụng Region hiện tại.</li>
 </ol>
-<pre tabindex="0"><code>export ACCOUNT_ID=$(aws sts get-caller-identity --output text --query Account)
-export AWS_REGION=ap-southeast-1
+<pre tabindex="0"><code>export ACCOUNT_ID=&lt;Your Account ID&gt;
+export AWS_REGION=&lt;Your AWS Region&gt;
 export AZS=($(aws ec2 describe-availability-zones --query &#39;AvailabilityZones[].ZoneName&#39; --output text --region $AWS_REGION))
 </code></pre><p><img alt="alt text" src="/3-cdkbasic/3.2-setupcloud9/image-8.png"></p>
 <ol start="11">
@@ -840,19 +840,19 @@ aws configure set default.region ${AWS_REGION}
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1710387519"></script>
-    <script src="/js/perfect-scrollbar.min.js?1710387519"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1710387519"></script>
-    <script src="/js/jquery.sticky.js?1710387519"></script>
-    <script src="/js/featherlight.min.js?1710387519"></script>
-    <script src="/js/highlight.pack.js?1710387519"></script>
+    <script src="/js/clipboard.min.js?1713665487"></script>
+    <script src="/js/perfect-scrollbar.min.js?1713665487"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1713665487"></script>
+    <script src="/js/jquery.sticky.js?1713665487"></script>
+    <script src="/js/featherlight.min.js?1713665487"></script>
+    <script src="/js/highlight.pack.js?1713665487"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1710387519"></script>
-    <script src="/js/learn.js?1710387519"></script>
-    <script src="/js/hugo-learn.js?1710387519"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1713665487"></script>
+    <script src="/js/learn.js?1713665487"></script>
+    <script src="/js/hugo-learn.js?1713665487"></script>
 
-    <link href="/mermaid/mermaid.css?1710387519" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1710387519"></script>
+    <link href="/mermaid/mermaid.css?1713665487" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1713665487"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
